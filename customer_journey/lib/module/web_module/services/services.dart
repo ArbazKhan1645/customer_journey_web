@@ -3,6 +3,7 @@ import 'package:customer_journey/module/web_module/web_screen/homepage/homepage_
 import 'package:customer_journey/module/web_module/web_screen/homepage/homepage_widget/homepage_main.dart';
 import 'package:customer_journey/module/web_module/web_screen/homepage/homepage_widget/homepage_howitwork.dart';
 import 'package:customer_journey/module/web_module/web_screen/homepage/homepage_widget/promotion.dart';
+import 'package:customer_journey/module/web_module/web_screen/homepage/ourservices.dart';
 import 'package:flutter/material.dart';
 
 class CustomerJourneyWebServices {
@@ -11,6 +12,7 @@ class CustomerJourneyWebServices {
     const HomepageMain(),
     const OurfleetHomePage(),
     const HowitWork(),
-    const PromoionScreen()
+    const PromoionScreen(),
+    const OurServices(),
   ];
 }

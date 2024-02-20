@@ -68,10 +68,55 @@ class PromoionScreen extends StatelessWidget {
         ),
         Container(
           height: 280,
-          color: Mycolors.secondaryColor,
           decoration: BoxDecoration(
+              color: Mycolors.secondaryColor,
               image:
                   DecorationImage(image: AssetImage(Myimages.barGroupImage))),
+          child: Row(
+            children: [
+              Spacer(),
+              const Text(
+                'Showcase some\nimpressive numbers.',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontWeight: FontWeight.w400),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 150),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    {'name': '285', 'description': 'Vehicles'},
+                    {'name': '97', 'description': 'Awards'},
+                    {'name': '13k', 'description': 'Happy Customer'},
+                  ]
+                      .map((e) => SizedBox(
+                            height: 70,
+                            width: 130,
+                            child: Column(
+                              children: [
+                                Text(e['name'] as String,
+                                    style: const TextStyle(
+                                        fontSize: 22,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600)),
+                                padding10,
+                                Text(e['description'] as String,
+                                    textAlign: TextAlign.center,
+                                    style: const TextStyle(
+                                      fontSize: 10,
+                                      color: Colors.white,
+                                    )),
+                              ],
+                            ),
+                          ))
+                      .toList(),
+                ),
+              ),
+              Spacer(),
+            ],
+          ),
         )
       ],
     );
