@@ -1,5 +1,7 @@
 import 'package:customer_journey/constant/image_constant.dart';
 import 'package:customer_journey/constant/sized_constant.dart';
+import 'package:customer_journey/model/webmodel/services_homepage_model.dart';
+import 'package:customer_journey/module/web_module/web_screen/homepage/homepage_widget/ourservices_widget.dart';
 import 'package:flutter/material.dart';
 
 class OurServices extends StatelessWidget {
@@ -44,7 +46,73 @@ class OurServices extends StatelessWidget {
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
-                  itemBuilder: (context, index) {}),
+                  itemCount: serviceslist.length,
+                  itemBuilder: (context, index) {
+                    var text = serviceslist[index].text;
+                    if (index == 1) {
+                      return Container(
+                        margin: const EdgeInsets.only(right: 15),
+                        height: 250,
+                        width: 250,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            image: DecorationImage(
+                              image: AssetImage(
+                                Myimages.ourfleedimg,
+                              ), // Replace with your image path
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(color: Colors.grey.shade200)),
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              right: 70, left: 15, bottom: 25),
+                          child: Align(
+                            alignment: Alignment.bottomLeft,
+                            child: SizedBox(
+                              height: 120,
+                              width: 100,
+                              child: Center(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      text,
+                                      style: TextStyle(
+                                        color: Colors.grey.shade200,
+                                      ),
+                                    ),
+                                    Text(
+                                      'This is thwe on of the great',
+                                      style: TextStyle(
+                                        color: Colors.grey.shade200,
+                                      ),
+                                    ),
+                                    Container(
+                                      height: 40,
+                                      width: 40,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      child: Image.asset(
+                                        Myimages.right,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      );
+                    }
+                    return ServicesWidget(
+                      text: text,
+                    );
+                  }),
             ),
           ),
           Padding(

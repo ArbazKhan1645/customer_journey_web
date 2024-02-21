@@ -1,4 +1,5 @@
 import 'package:customer_journey/constant/image_constant.dart';
+import 'package:customer_journey/constant/sized_constant.dart';
 import 'package:flutter/material.dart';
 
 class HowitWork extends StatelessWidget {
@@ -32,14 +33,35 @@ class HowitWork extends StatelessWidget {
                       Expanded(
                           flex: 4,
                           child: Container(
-                            child: const Column(
+                            child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   'How It Works',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 32),
-                                )
+                                ),
+                                Container(
+                                    child: Row(
+                                  children: [
+                                    Container(
+                                      height: 15,
+                                      width: 15,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                            color: Colors.grey.shade100),
+                                      ),
+                                    ),
+                                    Text(
+                                      'Create Your Route',
+                                      style: TextStyle(
+                                        color: Colors.grey.shade100,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                  ],
+                                )),
                               ],
                             ),
                           )),
