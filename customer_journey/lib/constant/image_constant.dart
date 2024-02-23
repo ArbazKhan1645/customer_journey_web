@@ -25,6 +25,9 @@ class Myimages {
   static String semicolon = 'assets/images/semicolon.png';
   static String rightup = 'assets/images/rightuparrow.png';
   static String phase = 'assets/images/phase.png';
+  static String blacklogo = 'assets/images/blacklogo.png';
+  static String blackdropdown = 'assets/images/blackdropdown.png';
+  static String vehicle = 'assets/images/vehicle.png';
+  static String route = 'assets/images/route.png';
+  static String coment = 'assets/images/coment.png';
 }
-
-

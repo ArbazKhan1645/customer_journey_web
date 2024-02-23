@@ -8,11 +8,18 @@ import 'package:customer_journey/module/web_module/web_screen/homepage/latestfro
 import 'package:customer_journey/module/web_module/web_screen/homepage/ourservices.dart';
 import 'package:customer_journey/module/web_module/web_screen/homepage/question_homepage.dart';
 import 'package:customer_journey/module/web_module/web_screen/homepage/viewallcities.dart';
+import 'package:customer_journey/module/web_module/web_screen/homepage_two/homepage_two_main.dart';
+import 'package:customer_journey/module/web_module/web_screen/homepage_two/homepagetwo_ourfleet.dart';
+import 'package:customer_journey/module/web_module/web_screen/homepage_two/how_it_work.dart';
+import 'package:customer_journey/module/web_module/web_screen/homepage_two/showcase-someimpressive.dart';
 import 'package:flutter/material.dart';
 
 class CustomerJourneyWebServices {
   static List<Widget> customerJourneyWebHomepagelist = [
-    const HeaderCommonWidget(),
+    const HeaderCommonWidget(
+      color: Colors.black,
+      darktheme: true,
+    ),
     const HomepageMain(),
     const OurfleetHomePage(),
     const HowitWork(),
@@ -22,5 +29,15 @@ class CustomerJourneyWebServices {
     const ViewAllCities(),
     const LatestNews(),
     const FreeqlyaskQuestion(),
+  ];
+  static List<Widget> customerJourneyWebHomepagtwolist = [
+    const HeaderCommonWidget(
+      color: Colors.white,
+      darktheme: false,
+    ),
+    const Homepagetwomain(),
+    const HowItWork(),
+    const OurfleetHomePageTwo(),
+    const Showcasesomeimpressive(),
   ];
 }

@@ -6,12 +6,17 @@ import 'package:flutter/material.dart';
 import '../constant/color_constant.dart';
 
 class HeaderCommonWidget extends StatelessWidget {
-  const HeaderCommonWidget({super.key});
-
+  const HeaderCommonWidget({
+    super.key,
+    required this.color,
+    required this.darktheme,
+  });
+  final Color color;
+  final bool darktheme;
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Mycolors.primaryColor,
+      color: color,
       height: 80,
       child: Padding(
         padding: responsivePadding,
@@ -20,10 +25,15 @@ class HeaderCommonWidget extends StatelessWidget {
             SizedBox(
                 height: 19,
                 width: 150,
-                child: Image.asset(
-                  Myimages.mainlogo,
-                  fit: BoxFit.cover,
-                )),
+                child: darktheme == true
+                    ? Image.asset(
+                        Myimages.mainlogo,
+                        fit: BoxFit.cover,
+                      )
+                    : Image.asset(
+                        Myimages.blacklogo,
+                        fit: BoxFit.cover,
+                      )),
             padding20,
             SizedBox(
               height: 40,
@@ -36,8 +46,10 @@ class HeaderCommonWidget extends StatelessWidget {
                             children: [
                               Text(
                                 e,
-                                style: const TextStyle(
-                                  color: Colors.white,
+                                style: TextStyle(
+                                  color: darktheme == true
+                                      ? Colors.white
+                                      : Colors.black,
                                   fontSize: 12,
                                 ),
                               ),
@@ -47,10 +59,15 @@ class HeaderCommonWidget extends StatelessWidget {
                                   : SizedBox(
                                       height: 10,
                                       width: 10,
-                                      child: Image.asset(
-                                        Myimages.arrowdown,
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: darktheme == true
+                                          ? Image.asset(
+                                              Myimages.arrowdown,
+                                              fit: BoxFit.cover,
+                                            )
+                                          : Image.asset(
+                                              Myimages.blackdropdown,
+                                              fit: BoxFit.cover,
+                                            )),
                             ],
                           ),
                         ))
@@ -69,10 +86,10 @@ class HeaderCommonWidget extends StatelessWidget {
                       Myimages.call,
                       fit: BoxFit.cover,
                     )),
-                const Text(
+                Text(
                   ' +41 22 715 7000',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: darktheme == true ? Colors.white : Colors.black,
                     fontSize: 10,
                   ),
                 ),
@@ -89,29 +106,33 @@ class HeaderCommonWidget extends StatelessWidget {
                       Myimages.language,
                       fit: BoxFit.cover,
                     )),
-                const Text(
+                Text(
                   ' EN',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: darktheme == true ? Colors.white : Colors.black,
                     fontSize: 10,
                   ),
                 ),
               ]),
             ),
             padding10,
-            const ButtonWidget(
+            ButtonWidget(
               color: Color(0xff333333),
               text: 'LogIn',
-              txtcolor: Colors.white,
+              txtcolor: darktheme == true ? Colors.white : Colors.black,
             ),
             padding10,
             ButtonWidget(
               color: Colors.white,
               text: 'SigIn',
-              txtcolor: Mycolors.primaryColor,
+              txtcolor: darktheme == true ? Colors.white : Colors.black,
             ),
             padding10,
-            const Icon(Icons.density_large, size: 15, color: Colors.white)
+            Icon(
+              Icons.density_large,
+              size: 15,
+              color: darktheme == true ? Colors.white : Colors.black,
+            )
           ],
         ),
       ),
