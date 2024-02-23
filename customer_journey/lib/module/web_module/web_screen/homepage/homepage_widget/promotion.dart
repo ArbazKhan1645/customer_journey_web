@@ -69,52 +69,67 @@ class PromoionScreen extends StatelessWidget {
         Container(
           height: 280,
           decoration: BoxDecoration(
-              color: Mycolors.secondaryColor,
-              image:
-                  DecorationImage(image: AssetImage(Myimages.barGroupImage))),
-          child: Row(
+            color: Mycolors.secondaryColor,
+          ),
+          child: Stack(
             children: [
-              Spacer(),
-              const Text(
-                'Showcase some\nimpressive numbers.',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 22,
-                    fontWeight: FontWeight.w400),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 150),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    {'name': '285', 'description': 'Vehicles'},
-                    {'name': '97', 'description': 'Awards'},
-                    {'name': '13k', 'description': 'Happy Customer'},
-                  ]
-                      .map((e) => SizedBox(
-                            height: 70,
-                            width: 130,
-                            child: Column(
-                              children: [
-                                Text(e['name'] as String,
-                                    style: const TextStyle(
-                                        fontSize: 22,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w600)),
-                                padding10,
-                                Text(e['description'] as String,
-                                    textAlign: TextAlign.center,
-                                    style: const TextStyle(
-                                      fontSize: 10,
-                                      color: Colors.white,
-                                    )),
-                              ],
-                            ),
-                          ))
-                      .toList(),
+              Positioned(
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  child: Opacity(
+                      opacity: 0.05,
+                      child: Image.asset(Myimages.barGroupImage))),
+              Positioned(
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                child: Padding(
+                  padding: responsivesecPadding,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        'Showcase some\nimpressive numbers.',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      Row(
+                        children: [
+                          {'name': '285', 'description': 'Vehicles'},
+                          {'name': '97', 'description': 'Awards'},
+                          {'name': '13k', 'description': 'Happy Customer'},
+                        ]
+                            .map((e) => SizedBox(
+                                  width: 160,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(e['name'] as String,
+                                          style: const TextStyle(
+                                              fontSize: 30,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w600)),
+                                      padding10,
+                                      Text(e['description'] as String,
+                                          textAlign: TextAlign.center,
+                                          style: const TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.white,
+                                          )),
+                                    ],
+                                  ),
+                                ))
+                            .toList(),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Spacer(),
             ],
           ),
         )

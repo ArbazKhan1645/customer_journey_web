@@ -1,5 +1,4 @@
 import 'package:customer_journey/constant/image_constant.dart';
-import 'package:customer_journey/constant/sized_constant.dart';
 import 'package:flutter/material.dart';
 
 class HowitWork extends StatelessWidget {
@@ -36,7 +35,7 @@ class HowitWork extends StatelessWidget {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text(
+                                const Text(
                                   'How It Works',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 32),

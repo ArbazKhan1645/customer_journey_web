@@ -10,11 +10,11 @@ class OurServices extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 700,
+      height: 550,
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 280, top: 25, bottom: 25),
+            padding: const EdgeInsets.only(left: 280, top: 45, bottom: 25),
             child: Row(
               children: [
                 const Text(
@@ -97,7 +97,7 @@ class OurServices extends StatelessWidget {
                                         ),
                                       ),
                                       child: Image.asset(
-                                        Myimages.right,
+                                        Myimages.rightup,
                                         color: Colors.white,
                                       ),
                                     ),

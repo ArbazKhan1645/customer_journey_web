@@ -22,4 +22,9 @@ class Myimages {
   static String groupImage = 'assets/images/group.png';
   static String barGroupImage = 'assets/images/bargroup.png';
   static String laptopImage = 'assets/images/laptop.png';
+  static String semicolon = 'assets/images/semicolon.png';
+  static String rightup = 'assets/images/rightuparrow.png';
+  static String phase = 'assets/images/phase.png';
 }
+
+
