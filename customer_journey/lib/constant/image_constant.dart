@@ -30,4 +30,7 @@ class Myimages {
   static String vehicle = 'assets/images/vehicle.png';
   static String route = 'assets/images/route.png';
   static String coment = 'assets/images/coment.png';
+  static String playstore = 'assets/images/playstore.png';
+  static String pinkphone = 'assets/images/pinkphone.png';
+  static String apple = 'assets/images/apple.png';
 }
