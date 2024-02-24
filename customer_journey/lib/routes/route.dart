@@ -1,18 +1,23 @@
 import 'package:customer_journey/module/web_module/web_screen/homepage/homepage_view.dart';
 import 'package:customer_journey/module/web_module/web_screen/homepage_two/homepage_two_view.dart';
+import 'package:customer_journey/module/web_module/web_screen/online_booking/online_booking_view.dart';
 import 'package:flutter/material.dart';
 
 class Routes {
   static const String customerJourneyWebHomeView =
       '/CustomerJourneyWebHomeView';
-      static const String customerJourneyWebHomePagetwoView ='/CustomerJourneyWebHomePagetwoView';
+  static const String customerJourneyWebHomePagetwoView =
+      '/CustomerJourneyWebHomePagetwoView';
+  static const String onlineBookingView = '/OnlineBookingView';
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case customerJourneyWebHomeView:
         return buildRoute(const CustomerJourneyWebHomeView());
-              case customerJourneyWebHomePagetwoView:
+      case customerJourneyWebHomePagetwoView:
         return buildRoute(const CustomerJourneyWebHomePagetwoView());
+      case onlineBookingView:
+        return buildRoute(const OnlineBookingView());
     }
     return buildRoute(const CustomerJourneyWebHomeView());
   }

@@ -58,11 +58,14 @@ class OurfleetWidget extends StatelessWidget {
                   width: 22,
                   decoration: const BoxDecoration(
                       shape: BoxShape.circle, color: Color(0xffE5E5E5)),
-                  child: Image.asset(
-                    iconimg1,
-                    color: Colors.black,
-                    height: 5,
-                    width: 5,
+                  child: Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Image.asset(
+                      iconimg1,
+                      color: Colors.black,
+                      height: 5,
+                      width: 5,
+                    ),
                   ),
                 ),
                 const Spacer(),
@@ -77,11 +80,14 @@ class OurfleetWidget extends StatelessWidget {
                   width: 22,
                   decoration: const BoxDecoration(
                       shape: BoxShape.circle, color: Color(0xffE5E5E5)),
-                  child: Image.asset(
-                    iconimg2,
-                    color: Colors.black,
-                    height: 5,
-                    width: 5,
+                  child: Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: Image.asset(
+                      iconimg2,
+                      color: Colors.black,
+                      height: 5,
+                      width: 5,
+                    ),
                   ),
                 ),
                 const Spacer(),

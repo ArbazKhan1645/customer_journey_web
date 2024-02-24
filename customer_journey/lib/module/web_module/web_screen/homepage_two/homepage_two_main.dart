@@ -8,14 +8,12 @@ class Homepagetwomain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size screensize = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       height: screensize.height - 80,
       width: screensize.width,
-      color: Colors.white,
       child: Stack(
         children: [
           Container(
-            height: 500,
             width: screensize.width,
             decoration: BoxDecoration(
                 image: DecorationImage(
@@ -28,7 +26,7 @@ class Homepagetwomain extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
+                  SizedBox(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -76,7 +74,7 @@ class Homepagetwomain extends StatelessWidget {
                                   image: DecorationImage(
                                     image: AssetImage(
                                       Myimages.rightup,
-                                    ), // Replace with your image path
+                                    ),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -87,26 +85,17 @@ class Homepagetwomain extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Stack(
-                    children: [
-                      Container(
-                        height: 300,
-                        child: Positioned(
-                          left: 0,
-                          top: 200,
-                          right: 0,
-                          bottom: 0,
-                          child: Container(
-                            height: 300,
-                            width: 250,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
-                    ],
-                  )
                 ],
               ),
+            ),
+          ),
+          Positioned(
+            right: 0,
+            bottom: -50,
+            child: Container(
+              height: 300,
+              width: 250,
+              color: Colors.white,
             ),
           ),
         ],

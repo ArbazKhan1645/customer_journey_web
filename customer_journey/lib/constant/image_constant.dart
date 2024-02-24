@@ -30,4 +30,5 @@ class Myimages {
   static String vehicle = 'assets/images/vehicle.png';
   static String route = 'assets/images/route.png';
   static String coment = 'assets/images/coment.png';
+  static String vctormap = 'assets/images/vectormap.png';
 }

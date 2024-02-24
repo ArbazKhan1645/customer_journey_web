@@ -15,25 +15,27 @@ class ServicesWidget extends StatelessWidget {
           image: DecorationImage(
             image: AssetImage(
               Myimages.ourfleedimg,
-            ), // Replace with your image path
+            ),
             fit: BoxFit.cover,
           ),
           border: Border.all(color: Colors.grey.shade200)),
-      child: Padding(
-        padding: const EdgeInsets.only(right: 170, left: 15, bottom: 25),
-        child: Align(
-          alignment: Alignment.bottomLeft,
-          child: SizedBox(
-            height: 20,
-            child: Center(
+      child: Container(
+        color: Colors.black.withOpacity(0.10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(20.0),
               child: Text(
                 text,
-                style: TextStyle(
-                  color: Colors.grey.shade200,
-                ),
+                style: const TextStyle(
+                    fontSize: 22,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
               ),
             ),
-          ),
+          ],
         ),
       ),
     );

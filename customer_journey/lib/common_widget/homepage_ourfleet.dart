@@ -1,75 +1,30 @@
+import 'package:customer_journey/common_widget/our_partners_cmmon.dart';
 import 'package:customer_journey/constant/image_constant.dart';
 import 'package:customer_journey/constant/sized_constant.dart';
 import 'package:customer_journey/model/webmodel/ourfleet-homepage_model.dart';
 import 'package:customer_journey/module/web_module/web_screen/homepage/homepage_widget/ourfleet_widget.dart';
 import 'package:flutter/material.dart';
 
-class OurfleetHomePage extends StatelessWidget {
-  const OurfleetHomePage({super.key});
+class OurfleetCommonWidget extends StatelessWidget {
+  const OurfleetCommonWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 700,
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 280, top: 25, bottom: 25),
-            child: Row(
-              children: [
-                const Text(
-                  'The partners who sell\nour products',
-                  style: TextStyle(color: Colors.black, fontSize: 18),
-                ),
-                const Spacer(),
-                SizedBox(
-                    height: 20,
-                    child: Image.asset(
-                      Myimages.img1,
-                      fit: BoxFit.cover,
-                    )),
-                const Spacer(),
-                SizedBox(
-                    height: 20,
-                    child: Image.asset(
-                      Myimages.img2,
-                      fit: BoxFit.cover,
-                    )),
-                const Spacer(),
-                SizedBox(
-                    height: 20,
-                    child: Image.asset(
-                      Myimages.img3,
-                      fit: BoxFit.cover,
-                    )),
-                const Spacer(),
-                SizedBox(
-                    height: 20,
-                    child: Image.asset(
-                      Myimages.img4,
-                      fit: BoxFit.cover,
-                    )),
-                Container(
-                  width: 280,
-                ),
-              ],
-            ),
-          ),
-          Divider(
-            color: Colors.grey.shade200,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 280, top: 25, bottom: 25),
+            padding: const EdgeInsets.only(left: 280, top: 0, bottom: 30),
             child: Row(
               children: [
                 const Text(
                   'Our Fleet',
-                  style: TextStyle(color: Colors.black, fontSize: 32),
+                  style: TextStyle(color: Colors.black, fontSize: 44),
                 ),
                 const Spacer(),
                 const Text(
                   'More Fleet ',
-                  style: TextStyle(color: Colors.black, fontSize: 12),
+                  style: TextStyle(color: Colors.black, fontSize: 16),
                 ),
                 const Icon(
                   Icons.arrow_outward,
