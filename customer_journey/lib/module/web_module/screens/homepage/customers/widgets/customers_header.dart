@@ -1,37 +1,28 @@
 import 'package:customer_journey/common_widget/button_widget.dart';
+import 'package:customer_journey/common_widget/header_common_widget.dart';
 import 'package:customer_journey/constant/image_constant.dart';
 import 'package:customer_journey/constant/sized_constant.dart';
 import 'package:flutter/material.dart';
 
-class HeaderCommonWidget extends StatelessWidget {
-  const HeaderCommonWidget({
-    super.key,
-    required this.color,
-    required this.darktheme,
-  });
-  final Color color;
-  final bool darktheme;
+class ChauffeurHeader extends StatelessWidget {
+  const ChauffeurHeader({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: color,
+      color: const Color(0xffFDEEEC),
       height: 80,
       child: Padding(
-        padding: responsivePadding,
+        padding: const EdgeInsets.only(left: 60, right: 60),
         child: Row(
           children: [
             SizedBox(
                 height: 19,
                 width: 150,
-                child: darktheme == true
-                    ? Image.asset(
-                        Myimages.mainlogo,
-                        fit: BoxFit.cover,
-                      )
-                    : Image.asset(
-                        Myimages.blacklogo,
-                        fit: BoxFit.cover,
-                      )),
+                child: Image.asset(
+                  Myimages.blacklogo,
+                  fit: BoxFit.cover,
+                )),
             padding20,
             SizedBox(
               height: 40,
@@ -44,11 +35,8 @@ class HeaderCommonWidget extends StatelessWidget {
                             children: [
                               Text(
                                 e,
-                                style: TextStyle(
-                                  color: darktheme == true
-                                      ? Colors.white
-                                      : Colors.black,
-                                  fontSize: 12,
+                                style: const TextStyle(
+                                  color: Colors.black,
                                 ),
                               ),
                               padding5,
@@ -57,15 +45,10 @@ class HeaderCommonWidget extends StatelessWidget {
                                   : SizedBox(
                                       height: 10,
                                       width: 10,
-                                      child: darktheme == true
-                                          ? Image.asset(
-                                              Myimages.arrowdown,
-                                              fit: BoxFit.cover,
-                                            )
-                                          : Image.asset(
-                                              Myimages.blackdropdown,
-                                              fit: BoxFit.cover,
-                                            )),
+                                      child: Image.asset(
+                                        Myimages.blackdropdown,
+                                        fit: BoxFit.cover,
+                                      )),
                             ],
                           ),
                         ))
@@ -78,17 +61,17 @@ class HeaderCommonWidget extends StatelessWidget {
             Container(
               child: Row(children: [
                 SizedBox(
-                    height: 12,
-                    width: 12,
+                    height: 20,
+                    width: 20,
                     child: Image.asset(
                       Myimages.call,
                       fit: BoxFit.cover,
+                      color: Colors.black,
                     )),
-                Text(
+                const Text(
                   ' +41 22 715 7000',
                   style: TextStyle(
-                    color: darktheme == true ? Colors.white : Colors.black,
-                    fontSize: 10,
+                    color: Colors.black,
                   ),
                 ),
               ]),
@@ -98,38 +81,48 @@ class HeaderCommonWidget extends StatelessWidget {
             Container(
               child: Row(children: [
                 SizedBox(
-                    height: 12,
-                    width: 12,
+                    height: 20,
+                    width: 20,
                     child: Image.asset(
                       Myimages.language,
+                      color: Colors.black,
                       fit: BoxFit.cover,
                     )),
-                Text(
+                const Text(
                   ' EN',
                   style: TextStyle(
-                    color: darktheme == true ? Colors.white : Colors.black,
-                    fontSize: 10,
+                    color: Colors.black,
                   ),
                 ),
               ]),
             ),
             padding10,
-            ButtonWidget(
-              color: Color(0xff333333),
+            const ButtonWidget(
+              color: Colors.transparent,
               text: 'LogIn',
-              txtcolor: darktheme == true ? Colors.white : Colors.black,
+              txtcolor: Colors.black,
             ),
             padding10,
-            ButtonWidget(
-              color: Colors.white,
-              text: 'SigIn',
-              txtcolor: darktheme == true ? Colors.white : Colors.black,
+            Container(
+              height: 40,
+              width: 80,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8), border: Border.all()),
+              child: const Center(
+                child: Text(
+                  'Sign up',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                  ),
+                ),
+              ),
             ),
             padding10,
-            Icon(
+            const Icon(
               Icons.density_large,
               size: 15,
-              color: darktheme == true ? Colors.white : Colors.black,
+              color: Colors.black,
             )
           ],
         ),
@@ -137,5 +130,3 @@ class HeaderCommonWidget extends StatelessWidget {
     );
   }
 }
-
-List tablist = ['Home', 'Pages', 'Our Fleet', 'Services', 'Blog', 'Contact'];

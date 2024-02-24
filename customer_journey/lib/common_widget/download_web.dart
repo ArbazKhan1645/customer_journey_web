@@ -13,19 +13,17 @@ class DownloadPage extends StatelessWidget {
       color: color,
       child: Padding(
         padding: const EdgeInsets.only(left: 150),
-        child:
-            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          Container(
-            height: 175,
-            width: 352,
+        child: Row(children: [
+          SizedBox(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   'Download the app',
                   style: TextStyle(
                     color: textcolor,
-                    fontSize: 16,
+                    fontSize: 44,
                   ),
                 ),
                 padding20,
@@ -33,44 +31,49 @@ class DownloadPage extends StatelessWidget {
                   'Have a personal driver at your fingertips no matter where you\nare with our easy-to-use smartphone app.',
                   style: TextStyle(
                     color: textcolor,
-                    fontSize: 12,
+                    fontSize: 16,
                   ),
                 ),
-                padding40,
+                padding20,
                 Row(
                   children: [
                     Container(
-                      height: 40,
-                      width: 170,
+                      height: 60,
+                      width: 210,
+                      margin: const EdgeInsets.only(left: 10),
                       decoration: BoxDecoration(
-                          color: Color(0xff333333),
-                          borderRadius: BorderRadius.circular(5)),
+                          color: const Color(0xff333333),
+                          borderRadius: BorderRadius.circular(12)),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
+                          padding20,
                           Image.asset(Myimages.apple),
+                          padding20,
                           Container(
                             width: 1,
                             height: 25,
-                            color: Colors.grey,
+                            color: textcolor,
                           ),
+                          padding20,
                           Padding(
-                            padding: const EdgeInsets.only(top: 5),
+                            padding: const EdgeInsets.only(top: 0),
                             child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const Text(
-                                  'Download on the',
+                                Text(
+                                  'download on the mac',
                                   style: TextStyle(
-                                    fontSize: 8,
-                                    color: Colors.white,
+                                    fontSize: 12,
+                                    color: textcolor,
                                   ),
                                 ),
-                                const Text(
-                                  'AppStore',
+                                Text(
+                                  'Appstore',
                                   style: TextStyle(
-                                    fontSize: 10,
-                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w600,
+                                    color: textcolor,
                                   ),
                                 ),
                               ],
@@ -80,38 +83,42 @@ class DownloadPage extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      height: 40,
-                      width: 170,
-                      margin: EdgeInsets.only(left: 10),
+                      height: 60,
+                      width: 210,
+                      margin: const EdgeInsets.only(left: 10),
                       decoration: BoxDecoration(
-                          color: Color(0xff333333),
-                          borderRadius: BorderRadius.circular(5)),
+                          color: const Color(0xff333333),
+                          borderRadius: BorderRadius.circular(12)),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
+                          padding20,
                           Image.asset(Myimages.playstore),
+                          padding20,
                           Container(
                             width: 1,
                             height: 25,
-                            color: Colors.grey,
+                            color: textcolor,
                           ),
+                          padding20,
                           Padding(
-                            padding: const EdgeInsets.only(top: 5),
+                            padding: const EdgeInsets.only(top: 0),
                             child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const Text(
+                                Text(
                                   'Get it',
                                   style: TextStyle(
-                                    fontSize: 8,
-                                    color: Colors.white,
+                                    fontSize: 12,
+                                    color: textcolor,
                                   ),
                                 ),
-                                const Text(
+                                Text(
                                   'Googleplay',
                                   style: TextStyle(
-                                    fontSize: 10,
-                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w600,
+                                    color: textcolor,
                                   ),
                                 ),
                               ],
@@ -125,7 +132,14 @@ class DownloadPage extends StatelessWidget {
               ],
             ),
           ),
-          Image.asset(Myimages.pinkphone)
+          Expanded(
+              child: Container(
+            height: 500,
+            child: Image.asset(
+              Myimages.pinkphone,
+              fit: BoxFit.cover,
+            ),
+          ))
         ]),
       ),
     );

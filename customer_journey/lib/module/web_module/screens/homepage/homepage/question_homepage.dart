@@ -1,6 +1,6 @@
 import 'package:customer_journey/constant/sized_constant.dart';
 import 'package:customer_journey/model/webmodel/question_model.dart';
-import 'package:customer_journey/module/web_module/web_screen/homepage/questionwidget.dart';
+import 'package:customer_journey/module/web_module/screens/homepage/homepage/questionwidget.dart';
 import 'package:flutter/material.dart';
 
 class FreeqlyaskQuestion extends StatelessWidget {

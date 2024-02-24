@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      initialRoute: Routes.onlineBookingView,
+      initialRoute: Routes.chauffeurViewWeb,
       onGenerateRoute: Routes.onGenerateRoute,
     );
   }

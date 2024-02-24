@@ -1,6 +1,7 @@
-import 'package:customer_journey/module/web_module/web_screen/homepage/homepage_view.dart';
-import 'package:customer_journey/module/web_module/web_screen/homepage_two/homepage_two_view.dart';
-import 'package:customer_journey/module/web_module/web_screen/online_booking/online_booking_view.dart';
+import 'package:customer_journey/module/web_module/web_screen/Chauffeur/Chauffeur_view.dart';
+import 'package:customer_journey/module/web_module/screens/homepage/homepage/homepage_view.dart';
+import 'package:customer_journey/module/web_module/screens/homepage/homepage_two/homepage_two_view.dart';
+import 'package:customer_journey/module/web_module/screens/homepage/online_booking/online_booking_view.dart';
 import 'package:flutter/material.dart';
 
 class Routes {
@@ -9,9 +10,12 @@ class Routes {
   static const String customerJourneyWebHomePagetwoView =
       '/CustomerJourneyWebHomePagetwoView';
   static const String onlineBookingView = '/OnlineBookingView';
+  static const String chauffeurViewWeb = '/chauffeurViewWeb';
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
+      case chauffeurViewWeb:
+        return buildRoute(const ChauffeurViewWeb());
       case customerJourneyWebHomeView:
         return buildRoute(const CustomerJourneyWebHomeView());
       case customerJourneyWebHomePagetwoView:

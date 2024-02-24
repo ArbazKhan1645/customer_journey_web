@@ -1,7 +1,7 @@
 import 'package:customer_journey/constant/image_constant.dart';
 import 'package:customer_journey/constant/sized_constant.dart';
 import 'package:customer_journey/model/webmodel/latestnews_model.dart';
-import 'package:customer_journey/module/web_module/web_screen/homepage_two/homepage_two_widget/latestnew_hometwo_widget.dart';
+import 'package:customer_journey/module/web_module/screens/homepage/homepage_two/homepage_two_widget/latestnew_hometwo_widget.dart';
 import 'package:flutter/material.dart';
 
 class LatestNewsHomeTwo extends StatelessWidget {
