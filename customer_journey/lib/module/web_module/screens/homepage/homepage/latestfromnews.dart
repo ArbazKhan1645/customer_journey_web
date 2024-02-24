@@ -1,5 +1,5 @@
 import 'package:customer_journey/model/webmodel/latestnews_model.dart';
-import 'package:customer_journey/module/web_module/web_screen/homepage/homepage_widget/latestnews_widget.dart';
+import 'package:customer_journey/module/web_module/screens/homepage/homepage/homepage_widget/latestnews_widget.dart';
 import 'package:flutter/material.dart';
 
 class LatestNews extends StatelessWidget {

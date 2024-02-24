@@ -1,6 +1,6 @@
 import 'package:customer_journey/constant/sized_constant.dart';
 import 'package:customer_journey/model/webmodel/howitwork_model.dart';
-import 'package:customer_journey/module/web_module/web_screen/homepage_two/homepage_two_widget/howitwork-widget.dart';
+import 'package:customer_journey/module/web_module/screens/homepage/homepage_two/homepage_two_widget/howitwork-widget.dart';
 import 'package:flutter/material.dart';
 
 class HowItWork extends StatelessWidget {

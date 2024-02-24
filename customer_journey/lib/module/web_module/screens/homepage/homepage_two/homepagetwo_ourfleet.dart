@@ -1,6 +1,6 @@
 import 'package:customer_journey/constant/sized_constant.dart';
 import 'package:customer_journey/model/webmodel/ourfleethomepagetwo_model.dart';
-import 'package:customer_journey/module/web_module/web_screen/homepage_two/homepage_two_widget/ourfleethometwo_widget.dart';
+import 'package:customer_journey/module/web_module/screens/homepage/homepage_two/homepage_two_widget/ourfleethometwo_widget.dart';
 import 'package:flutter/material.dart';
 
 class OurfleetHomePageTwo extends StatelessWidget {
@@ -10,7 +10,7 @@ class OurfleetHomePageTwo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 700,
-      color: Color(0xffF6F6F6),
+      color: const Color(0xffF6F6F6),
       child: Padding(
         padding: responsivePadding,
         child: Column(

@@ -1,7 +1,7 @@
 import 'package:customer_journey/constant/image_constant.dart';
 import 'package:customer_journey/constant/sized_constant.dart';
 import 'package:customer_journey/model/webmodel/services_homepage_model.dart';
-import 'package:customer_journey/module/web_module/web_screen/homepage/homepage_widget/ourservices_widget.dart';
+import 'package:customer_journey/module/web_module/screens/homepage/homepage/homepage_widget/ourservices_widget.dart';
 import 'package:flutter/material.dart';
 
 class OurServicesCommonWidget extends StatelessWidget {
