@@ -16,7 +16,7 @@ class DownloadPage extends StatelessWidget {
         child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           Container(
-            height: 170,
+            height: 175,
             width: 352,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
