@@ -1,4 +1,4 @@
-import 'package:customer_journey/module/web_module/web_screen/Chauffeur/Chauffeur_view.dart';
+import 'package:customer_journey/module/web_module/screens/homepage/chauffeur/chauffeur_view.dart';
 import 'package:customer_journey/module/web_module/screens/homepage/homepage/homepage_view.dart';
 import 'package:customer_journey/module/web_module/screens/homepage/homepage_two/homepage_two_view.dart';
 import 'package:customer_journey/module/web_module/screens/homepage/online_booking/online_booking_view.dart';
