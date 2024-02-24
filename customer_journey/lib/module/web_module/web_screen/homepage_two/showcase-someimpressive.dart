@@ -36,12 +36,17 @@ class Showcasesomeimpressive extends StatelessWidget {
                             children: [
                               Container(
                                 height: 30,
-                                width: 90,
+                                width: 120,
                                 decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(5)),
-                                child: const Row(
-                                  children: [Center(child: Text('Play Video'))],
+                                child: Center(
+                                  child: Row(
+                                    children: [
+                                      Image.asset(Myimages.phase),
+                                      const Text(' Play Video')
+                                    ],
+                                  ),
                                 ),
                               )
                             ],
@@ -49,7 +54,7 @@ class Showcasesomeimpressive extends StatelessWidget {
                         )),
                   ),
                   padding100,
-                  Container(
+                  SizedBox(
                     height: 300,
                     width: 400,
                     child: Column(
@@ -71,7 +76,15 @@ class Showcasesomeimpressive extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Container(
+                              height: 40,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(2),
+                                  border: Border.all(
+                                    color: Colors.grey.shade200,
+                                  )),
                               child: const Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
                                     '285',
@@ -90,7 +103,15 @@ class Showcasesomeimpressive extends StatelessWidget {
                               ),
                             ),
                             Container(
+                              height: 40,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(2),
+                                  border: Border.all(
+                                    color: Colors.grey.shade200,
+                                  )),
                               child: const Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
                                     '97',
@@ -109,7 +130,15 @@ class Showcasesomeimpressive extends StatelessWidget {
                               ),
                             ),
                             Container(
+                              height: 40,
+                              width: 110,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(2),
+                                  border: Border.all(
+                                    color: Colors.grey.shade200,
+                                  )),
                               child: const Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
                                     '137',
@@ -117,7 +146,7 @@ class Showcasesomeimpressive extends StatelessWidget {
                                         fontSize: 14,
                                         fontWeight: FontWeight.normal),
                                   ),
-                                  padding10,
+                                  padding20,
                                   Text(
                                     'Happy\nCustomer',
                                     style: TextStyle(
@@ -129,21 +158,22 @@ class Showcasesomeimpressive extends StatelessWidget {
                             ),
                           ],
                         ),
+                        padding20,
                         Container(
                           height: 30,
-                          width: 90,
+                          width: 130,
                           decoration: BoxDecoration(
                               color: Colors.red,
                               borderRadius: BorderRadius.circular(5)),
                           child: const Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Center(
-                                  child: Text(
+                              Text(
                                 'Learn more',
                                 style: TextStyle(
                                   color: Colors.white,
                                 ),
-                              )),
+                              ),
                               Icon(
                                 Icons.arrow_outward_rounded,
                                 size: 15,

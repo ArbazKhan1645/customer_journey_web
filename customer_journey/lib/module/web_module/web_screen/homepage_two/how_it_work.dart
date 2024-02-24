@@ -102,27 +102,31 @@ class HowItWork extends StatelessWidget {
           ),
           padding40,
           Padding(
-            padding: const EdgeInsets.only(right: 140),
-            child: SizedBox(
-              height: 290,
-              child: ListView.builder(
-                  shrinkWrap: true,
-                  scrollDirection: Axis.horizontal,
-                  itemCount: worklist.length,
-                  itemBuilder: (context, index) {
-                    var text = worklist[index].text;
-                    var subtext = worklist[index].subtext;
-                    var img = worklist[index].img;
-                    var icon = worklist[index].icon;
-                    var thirdtext = worklist[index].thirdtext;
-                    return WorkWidget(
-                      img: img,
-                      text: text,
-                      subtext: subtext,
-                      thirdtext: thirdtext,
-                      icon: icon,
-                    );
-                  }),
+            padding: const EdgeInsets.only(left: 140),
+            child: Row(
+              children: [
+                SizedBox(
+                  height: 290,
+                  child: ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: worklist.length,
+                      itemBuilder: (context, index) {
+                        var text = worklist[index].text;
+                        var subtext = worklist[index].subtext;
+                        var img = worklist[index].img;
+                        var icon = worklist[index].icon;
+                        var thirdtext = worklist[index].thirdtext;
+                        return WorkWidget(
+                          img: img,
+                          text: text,
+                          subtext: subtext,
+                          thirdtext: thirdtext,
+                          icon: icon,
+                        );
+                      }),
+                ),
+              ],
             ),
           )
         ],

@@ -35,32 +35,41 @@ class OurfleetHomePageTwo extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
-              height: 250,
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  shrinkWrap: true,
-                  itemCount: ourfleetlist2.length,
-                  itemBuilder: (context, index) {
-                    var title = ourfleetlist2[index].title;
-                    var subtitle = ourfleetlist2[index].subtitle;
-                    var image = ourfleetlist2[index].image;
-                    var iconimg1 = ourfleetlist2[index].iconimg1;
-                    var iconimg1title = ourfleetlist2[index].iconimg1title;
-                    var iconimg2 = ourfleetlist2[index].iconimg2;
-                    var iconimg2title = ourfleetlist2[index].iconimg2title;
-                    var check = ourfleetlist2[index].check;
-                    return OurfleethmetwoWidget(
-                      title: title,
-                      subtitle: subtitle,
-                      image: image,
-                      iconimg1: iconimg1,
-                      iconimg1title: iconimg1title,
-                      iconimg2: iconimg2,
-                      iconimg2title: iconimg2title,
-                      check: check,
-                    );
-                  }),
+            Padding(
+              padding: const EdgeInsets.only(left: 140, top: 40),
+              child: Row(
+                children: [
+                  SizedBox(
+                    height: 250,
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        shrinkWrap: true,
+                        itemCount: ourfleetlist2.length,
+                        itemBuilder: (context, index) {
+                          var title = ourfleetlist2[index].title;
+                          var subtitle = ourfleetlist2[index].subtitle;
+                          var image = ourfleetlist2[index].image;
+                          var iconimg1 = ourfleetlist2[index].iconimg1;
+                          var iconimg1title =
+                              ourfleetlist2[index].iconimg1title;
+                          var iconimg2 = ourfleetlist2[index].iconimg2;
+                          var iconimg2title =
+                              ourfleetlist2[index].iconimg2title;
+                          var check = ourfleetlist2[index].check;
+                          return OurfleethmetwoWidget(
+                            title: title,
+                            subtitle: subtitle,
+                            image: image,
+                            iconimg1: iconimg1,
+                            iconimg1title: iconimg1title,
+                            iconimg2: iconimg2,
+                            iconimg2title: iconimg2title,
+                            check: check,
+                          );
+                        }),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
