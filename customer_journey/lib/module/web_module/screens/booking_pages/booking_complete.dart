@@ -177,7 +177,7 @@ class BookingComplete extends StatelessWidget {
                             title: 'Special Requirements', subtitle: ''),
                       ],
                     )),
-                padding10,
+                padding15,
               ],
             ),
           ],
