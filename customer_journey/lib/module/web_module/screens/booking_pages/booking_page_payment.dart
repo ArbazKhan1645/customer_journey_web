@@ -2,8 +2,15 @@ import 'package:customer_journey/constant/image_constant.dart';
 import 'package:customer_journey/constant/sized_constant.dart';
 import 'package:flutter/material.dart';
 
-class BookingDetailPage extends StatelessWidget {
-  const BookingDetailPage({super.key});
+class BookingPaymentPage extends StatefulWidget {
+  const BookingPaymentPage({super.key});
+
+  @override
+  State<BookingPaymentPage> createState() => _BookingPaymentPageState();
+}
+
+class _BookingPaymentPageState extends State<BookingPaymentPage> {
+  bool isChecked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +28,11 @@ class BookingDetailPage extends StatelessWidget {
                     const Padding(
                       padding: EdgeInsets.only(top: 25, bottom: 25),
                       child: Text(
-                        'Passenger Details',
+                        'Billing Address',
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.black,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ),
@@ -81,39 +89,274 @@ class BookingDetailPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                        padding40,
+                        padding20,
+                        Container(
+                          height: 30,
+                          decoration: BoxDecoration(
+                            color: const Color(0xffF6F6F6),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.only(
+                              left: 10,
+                              bottom: 15,
+                            ),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Company',
+                                hintStyle: TextStyle(
+                                    color: Colors.black, fontSize: 12),
+                              ),
+                            ),
+                          ),
+                        ),
+                        padding20,
+                        Container(
+                          height: 30,
+                          decoration: BoxDecoration(
+                            color: const Color(0xffF6F6F6),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.only(
+                              left: 10,
+                              bottom: 15,
+                            ),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Address',
+                                hintStyle: TextStyle(
+                                    color: Colors.black, fontSize: 12),
+                              ),
+                            ),
+                          ),
+                        ),
+                        padding20,
                         const Row(
                           children: [
                             Expanded(
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  border: OutlineInputBorder(
-                                      borderSide:
-                                          BorderSide(color: Colors.black)),
-                                  labelText: 'Email Adress',
+                              flex: 2,
+                              child: SizedBox(
+                                height: 40,
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                        borderSide:
+                                            BorderSide(color: Colors.teal)),
+                                    labelText: 'Country',
+                                    hintStyle: TextStyle(
+                                        color: Colors.black, fontSize: 12),
+                                    suffixIcon:
+                                        Icon(Icons.arrow_drop_down_outlined),
+                                  ),
                                 ),
                               ),
                             ),
                             padding20,
                             Expanded(
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  border: OutlineInputBorder(
-                                      borderSide:
-                                          BorderSide(color: Colors.black)),
-                                  labelText: 'Phone Number',
+                              flex: 2,
+                              child: SizedBox(
+                                height: 40,
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                        borderSide:
+                                            BorderSide(color: Colors.teal)),
+                                    labelText: 'City',
+                                    hintStyle: TextStyle(
+                                        color: Colors.black, fontSize: 12),
+                                    suffixIcon:
+                                        Icon(Icons.arrow_drop_down_outlined),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            padding20,
+                            Expanded(
+                              flex: 6,
+                              child: SizedBox(
+                                height: 40,
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                        borderSide:
+                                            BorderSide(color: Colors.teal)),
+                                    labelText: 'Zip/Postal Code',
+                                    suffixIcon:
+                                        Icon(Icons.arrow_drop_down_outlined),
+                                  ),
                                 ),
                               ),
                             ),
                           ],
                         ),
-                        padding40,
-                        Row(
+                        padding20,
+                        const Row(
                           children: [
                             Text(
-                              'Options',
+                              'Select Payment Method',
                               style: TextStyle(
-                                fontSize: 14,
+                                fontSize: 15,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                        padding20,
+                        Container(
+                          height: 40,
+                          decoration: BoxDecoration(
+                            color: const Color(0xffF6F6F6),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.only(
+                              left: 10,
+                              bottom: 15,
+                              top: 10,
+                            ),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Credit Card',
+                                hintStyle: TextStyle(
+                                    color: Colors.black, fontSize: 12),
+                                suffixIcon:
+                                    Icon(Icons.arrow_drop_down_outlined),
+                              ),
+                            ),
+                          ),
+                        ),
+                        padding20,
+                        const Row(
+                          children: [
+                            Text(
+                              'Credit Card Payment',
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                        padding20,
+                        Container(
+                          height: 40,
+                          decoration: BoxDecoration(
+                            color: const Color(0xffF6F6F6),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.only(
+                              left: 10,
+                              bottom: 15,
+                            ),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Card Holder Name',
+                                hintStyle: TextStyle(
+                                    color: Colors.black, fontSize: 12),
+                              ),
+                            ),
+                          ),
+                        ),
+                        padding20,
+                        Container(
+                          height: 40,
+                          decoration: BoxDecoration(
+                            color: const Color(0xffF6F6F6),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.only(
+                              left: 10,
+                              bottom: 15,
+                            ),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Card Name',
+                                hintStyle: TextStyle(
+                                    color: Colors.black, fontSize: 12),
+                              ),
+                            ),
+                          ),
+                        ),
+                        padding20,
+                        const Row(
+                          children: [
+                            Expanded(
+                              flex: 2,
+                              child: SizedBox(
+                                height: 40,
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                        borderSide:
+                                            BorderSide(color: Colors.teal)),
+                                    labelText: 'Month',
+                                    hintStyle: TextStyle(
+                                        color: Colors.black, fontSize: 12),
+                                    suffixIcon:
+                                        Icon(Icons.arrow_drop_down_outlined),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            padding20,
+                            Expanded(
+                              flex: 2,
+                              child: SizedBox(
+                                height: 40,
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                        borderSide:
+                                            BorderSide(color: Colors.teal)),
+                                    labelText: 'Year',
+                                    hintStyle: TextStyle(
+                                        color: Colors.black, fontSize: 12),
+                                    suffixIcon:
+                                        Icon(Icons.arrow_drop_down_outlined),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            padding20,
+                            Expanded(
+                              flex: 6,
+                              child: SizedBox(
+                                height: 40,
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                        borderSide:
+                                            BorderSide(color: Colors.teal)),
+                                    labelText: 'CVV',
+                                    suffixIcon:
+                                        Icon(Icons.arrow_drop_down_outlined),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        padding20,
+                        Row(
+                          children: [Image.asset(Myimages.card)],
+                        ),
+                        padding20,
+                        const Row(
+                          children: [
+                            Text(
+                              'The credit card must be issued in the drivers name. Debit cards are accepted at some locations and for some car\ncategories.',
+                              style: TextStyle(
+                                fontSize: 10,
                                 color: Colors.black,
                               ),
                             ),
@@ -122,88 +365,30 @@ class BookingDetailPage extends StatelessWidget {
                         padding20,
                         Row(
                           children: [
-                            Expanded(
-                              child: Container(
-                                height: 40,
-                                decoration: BoxDecoration(
-                                  color: const Color(0xffF6F6F6),
-                                  borderRadius: BorderRadius.circular(5),
-                                ),
-                                child: const Padding(
-                                  padding: EdgeInsets.only(
-                                    left: 10,
-                                    bottom: 15,
-                                    top: 10,
-                                  ),
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                      border: InputBorder.none,
-                                      hintText: 'Passengers',
-                                      hintStyle: TextStyle(
-                                          color: Colors.black, fontSize: 12),
-                                      suffixIcon:
-                                          Icon(Icons.arrow_drop_down_outlined),
-                                    ),
-                                  ),
-                                ),
-                              ),
+                            Checkbox(
+                              value: isChecked,
+                              onChanged: (value) {
+                                setState(() {
+                                  isChecked = value!;
+                                });
+                              },
                             ),
-                            padding20,
-                            Expanded(
-                              child: Container(
-                                height: 40,
-                                decoration: BoxDecoration(
-                                  color: const Color(0xffF6F6F6),
-                                  borderRadius: BorderRadius.circular(5),
-                                ),
-                                child: const Padding(
-                                  padding: EdgeInsets.only(
-                                    left: 10,
-                                    bottom: 15,
-                                    top: 10,
-                                  ),
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                      border: InputBorder.none,
-                                      hintText: 'Luggage',
-                                      hintStyle: TextStyle(
-                                          color: Colors.black, fontSize: 12),
-                                      suffixIcon:
-                                          Icon(Icons.arrow_drop_down_outlined),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
+                            const Text(
+                                'I accept the Terms & Conditions - Booking Conditions and Privacy Policy. *'),
                           ],
                         ),
-                        padding40,
                         Row(
                           children: [
-                            Expanded(
-                              child: Container(
-                                height: 130,
-                                decoration: BoxDecoration(
-                                  color: const Color(0xffF6F6F6),
-                                  borderRadius: BorderRadius.circular(2),
-                                ),
-                                child: const Padding(
-                                  padding: EdgeInsets.only(
-                                    left: 10,
-                                  ),
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                      border: InputBorder.none,
-                                      hintText: 'Note to Driver',
-                                      hintStyle: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 12,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
+                            Checkbox(
+                              value: isChecked,
+                              onChanged: (value) {
+                                setState(() {
+                                  isChecked = value!;
+                                });
+                              },
                             ),
+                            const Text(
+                                'I want to subscribe to Transfeero’s newsletter (Travel tips and special deals)'),
                           ],
                         ),
                         padding20,

@@ -1,5 +1,6 @@
 import 'package:customer_journey/constant/image_constant.dart';
 import 'package:customer_journey/module/web_module/screens/booking_pages/booking_page_detail.dart';
+import 'package:customer_journey/module/web_module/screens/booking_pages/booking_page_payment.dart';
 import 'package:customer_journey/module/web_module/screens/booking_pages/booking_pages_extras.dart';
 import 'package:customer_journey/module/web_module/screens/booking_pages/bookingpages_main/booking_pages_vehicle.dart';
 import 'package:flutter/material.dart';
@@ -22,20 +23,20 @@ List<Tabbarmodel> tabbarlist = [
       name: 'Veicle',
       number: '01',
       img: Myimages.tabbar1,
-      screen: BookingPageVehicle()),
+      screen: const BookingPageVehicle()),
   Tabbarmodel(
       name: 'Extras',
       number: '02',
       img: Myimages.tabbar2,
-      screen: BookingPageExtras()),
+      screen: const BookingPageExtras()),
   Tabbarmodel(
       name: 'Details',
       number: '03',
       img: Myimages.tabbardetail,
-      screen: BookingDetailPage()),
+      screen: const BookingDetailPage()),
   Tabbarmodel(
       name: 'Payment',
       number: '03',
       img: Myimages.tabbar3,
-      screen: BookingPageVehicle()),
+      screen: const BookingPaymentPage()),
 ];

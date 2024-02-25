@@ -1,20 +1,20 @@
 import 'package:customer_journey/constant/sized_constant.dart';
 import 'package:customer_journey/model/webmodel/tabbar_model.dart';
-import 'package:customer_journey/module/web_module/screens/booking_pages/booking_page_detail.dart';
+import 'package:customer_journey/module/web_module/screens/booking_pages/bookingpages_main/booking_pages_vehicle.dart';
 import 'package:flutter/material.dart';
 
-class bookingHeader extends StatefulWidget {
-  const bookingHeader({super.key});
+class BookingHeader extends StatefulWidget {
+  const BookingHeader({super.key});
 
   @override
-  State<bookingHeader> createState() => _bookingHeaderState();
+  State<BookingHeader> createState() => _BookingHeaderState();
 }
 
-class _bookingHeaderState extends State<bookingHeader> {
+class _BookingHeaderState extends State<BookingHeader> {
   String selectoption = 'Veicle';
-  Widget selectwidget = const BookingDetailPage();
+  Widget selectwidget = const BookingPageVehicle();
 
-  Functionname({required String option, required Widget screenone}) {
+  functionname({required String option, required Widget screenone}) {
     selectoption = option;
     selectwidget = screenone;
     setState(() {});
@@ -35,7 +35,7 @@ class _bookingHeaderState extends State<bookingHeader> {
               children: tabbarlist
                   .map((e) => InkWell(
                         onTap: () {
-                          Functionname(option: e.name, screenone: e.screen);
+                          functionname(option: e.name, screenone: e.screen);
                         },
                         child: Expanded(
                             child: Column(
