@@ -5,6 +5,8 @@ import 'package:customer_journey/common_widget/homepage_ourfleet.dart';
 import 'package:customer_journey/common_widget/our_partners_cmmon.dart';
 import 'package:customer_journey/common_widget/ourservices_common.dart';
 import 'package:customer_journey/constant/sized_constant.dart';
+import 'package:customer_journey/module/web_module/screens/booking_pages/bookingpages_main/booking_pages_vehicle.dart';
+import 'package:customer_journey/module/web_module/screens/booking_pages/bookingpages_main/widgets/bookingheader.dart';
 import 'package:customer_journey/module/web_module/screens/homepage/chauffeur/widgets/chauffeur_banner.dart';
 import 'package:customer_journey/module/web_module/screens/homepage/chauffeur/widgets/chauffeur_header.dart';
 import 'package:customer_journey/module/web_module/screens/homepage/chauffeur/widgets/chauffeur_how_it_work.dart';
@@ -87,5 +89,9 @@ class CustomerJourneyWebServices {
     const ChauffeurOurFleet()
   ];
 
-  static List<Widget> bookingPages = [];
+  static List<Widget> bookingPages = [
+    const HeaderCommonWidget(color: Colors.black, darktheme: true),
+    const bookingHeader(),
+    // const BookingPageVehicle(),
+  ];
 }

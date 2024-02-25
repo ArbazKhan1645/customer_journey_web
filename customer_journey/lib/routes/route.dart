@@ -1,3 +1,4 @@
+import 'package:customer_journey/module/web_module/screens/booking_pages/bookingpages_main/booking_pages_view.dart';
 import 'package:customer_journey/module/web_module/screens/homepage/chauffeur/chauffeur_view.dart';
 import 'package:customer_journey/module/web_module/screens/homepage/homepage/homepage_view.dart';
 import 'package:customer_journey/module/web_module/screens/homepage/homepage_two/homepage_two_view.dart';
@@ -11,6 +12,7 @@ class Routes {
       '/CustomerJourneyWebHomePagetwoView';
   static const String onlineBookingView = '/OnlineBookingView';
   static const String chauffeurViewWeb = '/chauffeurViewWeb';
+  static const String bookingPageMainView = '/BookingPageMainView';
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -22,8 +24,11 @@ class Routes {
         return buildRoute(const CustomerJourneyWebHomePagetwoView());
       case onlineBookingView:
         return buildRoute(const OnlineBookingView());
+
+      case bookingPageMainView:
+        return buildRoute(const BookingPageMainView());
     }
-    return buildRoute(const CustomerJourneyWebHomeView());
+    return buildRoute(const BookingPageMainView());
   }
 
   static buildRoute(Widget widget, {int? duration = 400}) {

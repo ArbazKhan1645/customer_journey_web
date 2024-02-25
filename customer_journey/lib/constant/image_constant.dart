@@ -34,4 +34,17 @@ class Myimages {
   static String playstore = 'assets/images/playstore.png';
   static String pinkphone = 'assets/images/pinkphone.png';
   static String apple = 'assets/images/apple.png';
+  static String tabbar1 = 'assets/images/tabbaricon1.png';
+  static String tabbar2 = 'assets/images/tabbaricontwo.png';
+  static String tabbar3 = 'assets/images/tabbaricon3.png';
+  static String tabbardetail = 'assets/images/tabbarfrnd.png';
+  static String surface = 'assets/images/surface.png';
+  static String cancel = 'assets/images/cancel.png';
+  static String layer = 'assets/images/layer.png';
+  static String safe = 'assets/images/safe.png';
+  static String map = 'assets/images/map.png';
+  static String a = 'assets/images/a.png';
+  static String b = 'assets/images/b.png';
+  static String clockred = 'assets/images/clockred.png';
+  static String calenderred = 'assets/images/calenderred.png';
 }
