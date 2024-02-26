@@ -54,4 +54,22 @@ List<OurFleetModel> ourfleetlist = [
       iconimg1title: 'Passengers 4',
       iconimg2: Myimages.language,
       iconimg2title: 'Luggage 2'),
+  OurFleetModel(
+      title: 'Business Van/SUV',
+      subtitle:
+          'Mercedes-Benz V-Class, Chevrolet Suburban, Cadillac Escalade, Toyota Alphard or similar',
+      image: Myimages.ourfleedimg,
+      iconimg1: Myimages.passenger,
+      iconimg1title: 'Passengers 4',
+      iconimg2: Myimages.language,
+      iconimg2title: 'Luggage 2'),
+  OurFleetModel(
+      title: 'Electric Class',
+      subtitle:
+          'Mercedes-Benz V-Class, Chevrolet Suburban, Cadillac Escalade, Toyota Alphard or similar',
+      image: Myimages.ourfleedimg,
+      iconimg1: Myimages.passenger,
+      iconimg1title: 'Passengers 4',
+      iconimg2: Myimages.language,
+      iconimg2title: 'Luggage 2'),
 ];

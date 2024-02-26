@@ -20,7 +20,7 @@ class OurfleetWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(right: 15),
+      margin: const EdgeInsets.only(right: 15, bottom: 15),
       height: 250,
       width: 250,
       decoration: BoxDecoration(

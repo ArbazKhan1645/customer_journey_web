@@ -1,4 +1,3 @@
-import 'package:customer_journey/common_widget/our_partners_cmmon.dart';
 import 'package:customer_journey/constant/image_constant.dart';
 import 'package:customer_journey/constant/sized_constant.dart';
 import 'package:customer_journey/model/webmodel/ourfleet-homepage_model.dart';
