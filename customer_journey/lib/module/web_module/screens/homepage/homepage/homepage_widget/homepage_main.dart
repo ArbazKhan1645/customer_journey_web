@@ -1,12 +1,11 @@
-import 'package:customer_journey/common_widget/hompage_footer.dart';
-import 'package:customer_journey/common_widget/smallcirclle_widget.dart';
 import 'package:customer_journey/constant/image_constant.dart';
 import 'package:customer_journey/constant/sized_constant.dart';
 import 'package:flutter/material.dart';
 
 class HomepageMain extends StatelessWidget {
-  const HomepageMain({super.key});
-
+  const HomepageMain({super.key, required this.color, required this.textcolor});
+  final Color color;
+  final Color textcolor;
   @override
   Widget build(BuildContext context) {
     Size screensize = MediaQuery.of(context).size;
@@ -20,116 +19,130 @@ class HomepageMain extends StatelessWidget {
               ),
               fit: BoxFit.cover)),
       child: Padding(
-        padding: responsivesecPadding,
+        padding: homepagepadding,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Spacer(),
-            Row(
-              children: [
-                SmallCircle(
-                  color: const Color(0xffABABAB),
-                  img: Myimages.left,
-                ),
-                padding5,
-                SmallCircle(
-                  color: const Color(0xffABABAB),
-                  img: Myimages.right,
-                ),
-                padding5,
-                const Text(
-                  '2 / 5',
-                  style: TextStyle(
-                      fontSize: 13,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            padding32,
+            padding100,
             const Text(
-              'Where Would You Like To Go?',
+              'Anywhere,\nAnytime.',
               style: TextStyle(
-                fontSize: 12,
+                fontSize: 42,
                 letterSpacing: 1,
+                fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
             ),
-            padding6,
+            padding20,
             const Text(
-              'Your Personal\nChauffeur Services',
+              'Vicros is all in one Mobile Machinic\nApp no more delay,\nDownload road user side app make\na mechanic booked',
               style: TextStyle(
-                  fontSize: 42,
-                  color: Colors.white,
+                  fontSize: 12,
+                  color: Colors.grey,
                   fontWeight: FontWeight.bold),
             ),
-            const Spacer(),
-            Container(
-              height: 70,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(40),
-              ),
-              child: Row(
-                children: [
-                  padding12,
-                  Footer(
-                    img: Myimages.plann,
-                    title: 'Date',
-                    subtitle: 'Thu, Oct 06, 2022',
-                  ),
-                  const Spacer(),
-                  Footer(
-                    img: Myimages.clock,
-                    title: 'Time',
-                    subtitle: '6 PM  :  15',
-                  ),
-                  const Spacer(),
-                  Footer(
-                    img: Myimages.back,
-                    title: 'From',
-                    subtitle: 'London City Airport (LCY)',
-                  ),
-                  const Spacer(),
-                  Footer(
-                    img: Myimages.back1,
-                    title: 'To',
-                    subtitle: 'London City Airport (LCY)',
-                  ),
-                  const Spacer(),
-                  Container(
-                    height: 40,
-                    width: 110,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(40),
-                        color: Colors.black),
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.search,
-                          color: Colors.white,
-                          size: 16,
+            padding40,
+            Row(
+              children: [
+                Container(
+                  height: 60,
+                  width: 210,
+                  margin: const EdgeInsets.only(right: 0),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12)),
+                  child: Row(
+                    children: [
+                      padding20,
+                      Image.asset(
+                        Myimages.apple,
+                        color: Colors.black,
+                      ),
+                      padding20,
+                      Container(
+                        width: 1,
+                        height: 25,
+                        color: textcolor,
+                      ),
+                      padding20,
+                      Padding(
+                        padding: const EdgeInsets.only(top: 0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'download on the mac',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: textcolor,
+                              ),
+                            ),
+                            Text(
+                              'Appstore',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color: textcolor,
+                              ),
+                            ),
+                          ],
                         ),
-                        padding5,
-                        Text(
-                          'Search',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                  padding12,
-                ],
-              ),
+                ),
+                Container(
+                  height: 60,
+                  width: 210,
+                  margin: const EdgeInsets.only(left: 10),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12)),
+                  child: Row(
+                    children: [
+                      padding20,
+                      Image.asset(
+                        Myimages.playstore,
+                        color: Colors.black,
+                      ),
+                      padding20,
+                      Container(
+                        width: 1,
+                        height: 25,
+                        color: textcolor,
+                      ),
+                      padding20,
+                      Padding(
+                        padding: const EdgeInsets.only(top: 0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Get it',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: textcolor,
+                              ),
+                            ),
+                            Text(
+                              'Googleplay',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color: textcolor,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
             ),
-            Container(
-              height: 50,
-            )
+            const Spacer(),
           ],
         ),
       ),

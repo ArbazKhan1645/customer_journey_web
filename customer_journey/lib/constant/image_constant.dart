@@ -48,4 +48,5 @@ class Myimages {
   static String clockred = 'assets/images/clockred.png';
   static String calenderred = 'assets/images/calenderred.png';
   static String card = 'assets/images/card.png';
+  static String repairman = 'assets/images/repairman.png';
 }

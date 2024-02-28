@@ -36,13 +36,20 @@ class HowitWork extends StatelessWidget {
                           flex: 4,
                           child: Container(
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 const Text(
-                                  'How It Works',
+                                  'Earn Money with VicPros on Demand',
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 32),
+                                      color: Colors.white, fontSize: 22),
                                 ),
+                                const Text(
+                                  'Make money on your schedule with VICPROS.',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 12),
+                                ),
+                                padding35,
                                 ListView.builder(
                                     shrinkWrap: true,
                                     itemCount: steplist.length,
@@ -188,7 +195,7 @@ class HowitWork extends StatelessWidget {
                       Expanded(
                           flex: 6,
                           child: Image.asset(
-                            Myimages.laptopImage,
+                            Myimages.repairman,
                             fit: BoxFit.fill,
                           ))
                     ],
@@ -207,17 +214,16 @@ class StepperModel {
 
 List<StepperModel> steplist = [
   StepperModel(
-      text: 'Create your route',
+      text: 'No Earning Cap',
       subtext:
-          "Enter your pickup & dropoff locations or the number of hours\nyou wish to book a car and driver for"),
+          "Go online and earn as much as you want,\nwe offer upto £70 an hour."),
   StepperModel(
-      text: 'Choose Vehicle For You',
+      text: 'Your own timing',
       subtext:
-          'On the day of your ride, you will receive two emai\nand SMS updates - one informing you that.'),
+          'Become your own boss, fit the work in\nyour own time 24/7 365 in a year.'),
   StepperModel(
-      text: 'Enjoy The Journey',
-      subtext:
-          'After your ride has taken place, we would appreciate it\nif you could rate your car and driver.'),
+      text: 'Get paid weekly',
+      subtext: 'We pay each week to your designated\nbank account.'),
 ];
 
 class StepperWidget extends StatelessWidget {

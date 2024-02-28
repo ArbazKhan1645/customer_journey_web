@@ -123,7 +123,7 @@ class HeaderCommonWidget extends StatelessWidget {
             ButtonWidget(
               color: Colors.white,
               text: 'SigIn',
-              txtcolor: darktheme == true ? Colors.white : Colors.black,
+              txtcolor: darktheme == false ? Colors.white : Colors.black,
             ),
             padding10,
             Icon(
@@ -138,4 +138,8 @@ class HeaderCommonWidget extends StatelessWidget {
   }
 }
 
-List tablist = ['Home', 'Pages', 'Our Fleet', 'Services', 'Blog', 'Contact'];
+List tablist = [
+  'Why VicPros?',
+  'Our Products ',
+  'Become Mechanic Partner',
+];
