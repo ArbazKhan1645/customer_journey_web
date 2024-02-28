@@ -26,7 +26,7 @@ class OurfleethmetwoWidget extends StatelessWidget {
       height: 250,
       width: 250,
       decoration: BoxDecoration(
-        color: Color(0xffFFFFFF),
+        color: const Color(0xffFFFFFF),
         borderRadius: BorderRadius.circular(5),
       ),
       child: Padding(
@@ -62,7 +62,7 @@ class OurfleethmetwoWidget extends StatelessWidget {
                 Container(
                   height: 22,
                   width: 22,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                   ),
                   child: Image.asset(

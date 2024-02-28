@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:customer_journey/model/webmodel/ourfleet-homepage_model.dart';
 import 'package:customer_journey/module/web_module/screens/homepage/homepage/homepage_widget/ourfleet_widget.dart';
 import 'package:flutter/material.dart';

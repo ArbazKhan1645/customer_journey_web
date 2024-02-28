@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:customer_journey/common_widget/download_web.dart';
 import 'package:flutter/material.dart';
 

@@ -16,7 +16,7 @@ class LatestNewsWidgetHometwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 15),
+      margin: const EdgeInsets.only(left: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -36,17 +36,20 @@ class LatestNewsWidgetHometwo extends StatelessWidget {
               Positioned(
                   top: 20,
                   left: 20,
+                  // ignore: avoid_unnecessary_containers
                   child: Container(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           amount,
-                          style: TextStyle(fontSize: 22, color: Colors.white),
+                          style: const TextStyle(
+                              fontSize: 22, color: Colors.white),
                         ),
                         Text(
                           date,
-                          style: TextStyle(fontSize: 12, color: Colors.white),
+                          style: const TextStyle(
+                              fontSize: 12, color: Colors.white),
                         ),
                       ],
                     ),
@@ -56,12 +59,12 @@ class LatestNewsWidgetHometwo extends StatelessWidget {
           padding10,
           Text(
             title,
-            style: TextStyle(fontSize: 12, color: Colors.black),
+            style: const TextStyle(fontSize: 12, color: Colors.black),
           ),
           padding10,
           Text(
             subtitle,
-            style: TextStyle(fontSize: 10, color: Colors.black),
+            style: const TextStyle(fontSize: 10, color: Colors.black),
           ),
           padding10,
           Container(

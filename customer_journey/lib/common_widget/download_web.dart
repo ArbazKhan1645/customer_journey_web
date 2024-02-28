@@ -133,7 +133,7 @@ class DownloadPage extends StatelessWidget {
             ),
           ),
           Expanded(
-              child: Container(
+              child: SizedBox(
             height: 500,
             child: Image.asset(
               Myimages.pinkphone,

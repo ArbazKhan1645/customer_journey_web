@@ -15,20 +15,20 @@ class ChauffeurOurFleet extends StatelessWidget {
         padding: responsivePadding,
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 200, right: 200, top: 50),
+            const Padding(
+              padding: EdgeInsets.only(left: 200, right: 200, top: 50),
               child: Row(
                 children: [
-                  const Text(
+                  Text(
                     'Our Fleet',
                     style: TextStyle(color: Colors.white, fontSize: 32),
                   ),
-                  const Spacer(),
-                  const Text(
+                  Spacer(),
+                  Text(
                     'More Fleet ',
                     style: TextStyle(color: Colors.white, fontSize: 12),
                   ),
-                  const Icon(
+                  Icon(
                     Icons.arrow_outward,
                     size: 15,
                   ),

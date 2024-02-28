@@ -1,4 +1,6 @@
-import 'package:customer_journey/constant/image_constant.dart';
+// ignore_for_file: file_names
+
+import '../../constant/image_constant.dart';
 
 class OurFleetModel {
   final String title;

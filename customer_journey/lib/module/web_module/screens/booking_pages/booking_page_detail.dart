@@ -108,7 +108,7 @@ class BookingDetailPage extends StatelessWidget {
                           ],
                         ),
                         padding40,
-                        Row(
+                        const Row(
                           children: [
                             Text(
                               'Options',

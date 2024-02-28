@@ -115,7 +115,7 @@ class HeaderCommonWidget extends StatelessWidget {
             ),
             padding10,
             ButtonWidget(
-              color: Color(0xff333333),
+              color: const Color(0xff333333),
               text: 'LogIn',
               txtcolor: darktheme == true ? Colors.white : Colors.black,
             ),

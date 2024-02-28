@@ -1,4 +1,6 @@
-import 'package:customer_journey/constant/sized_constant.dart';
+// ignore_for_file: file_names
+
+import '../../../../../../constant/sized_constant.dart';
 import 'package:flutter/material.dart';
 
 class WorkWidget extends StatelessWidget {
@@ -17,7 +19,7 @@ class WorkWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(right: 15),
+      margin: const EdgeInsets.only(right: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
