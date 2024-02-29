@@ -15,7 +15,7 @@ class HomepageMain extends StatelessWidget {
       decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage(
-                Myimages.blackbgpic,
+                Myimages.mainhomebackground,
               ),
               fit: BoxFit.cover)),
       child: Padding(

@@ -9,7 +9,7 @@ class HomepageDownload extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DownloadPage(
-      textcolor: Colors.black,
+      textcolor: Colors.white,
       color: Color(0xffFDEEEC),
     );
   }

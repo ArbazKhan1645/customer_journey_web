@@ -21,11 +21,11 @@ class HeaderCommonWidget extends StatelessWidget {
         child: Row(
           children: [
             SizedBox(
-                height: 19,
-                width: 150,
+                height: 59,
+                width: 70,
                 child: darktheme == true
                     ? Image.asset(
-                        Myimages.mainlogo,
+                        Myimages.blacklogo,
                         fit: BoxFit.cover,
                       )
                     : Image.asset(
