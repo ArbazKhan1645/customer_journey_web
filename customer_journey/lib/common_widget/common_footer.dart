@@ -47,10 +47,9 @@ class CommonFooterPage extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Expanded(child: buildwidget('Company', 7)),
-                Expanded(child: buildwidget('Top Cities', 5)),
-                Expanded(child: buildwidget('Explore', 6)),
-                Expanded(child: buildwidget('Classes', 4)),
+                Expanded(child: buildwidget('Our Company', ourcompanylist)),
+                Expanded(child: buildwidget('Our Product', ourproductslist)),
+                Expanded(child: buildwidget('Legal', legallist)),
                 Expanded(
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -198,24 +197,8 @@ class CommonFooterPage extends StatelessWidget {
               child: Row(
                 children: [
                   const Text(
-                    '© 2022 Luxride',
+                    'Copyright © VICPROS Ltd, 2024 – All right reserved!',
                     style: TextStyle(color: Colors.white),
-                  ),
-                  padding30,
-                  Row(
-                    children: [
-                      'Terms',
-                      'Privacy policy',
-                      'Legal notice',
-                      'Accessibility',
-                    ]
-                        .map((e) => TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              e,
-                              style: const TextStyle(color: Colors.white),
-                            )))
-                        .toList(),
                   ),
                   const Spacer(),
                   const Icon(Icons.location_on_outlined, color: Colors.white),
@@ -250,7 +233,7 @@ class CommonFooterPage extends StatelessWidget {
     );
   }
 
-  buildwidget(title, itemcount) {
+  buildwidget(title, List datalist) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -262,15 +245,34 @@ class CommonFooterPage extends StatelessWidget {
         padding10,
         ListView.builder(
             shrinkWrap: true,
-            itemCount: itemcount,
+            itemCount: datalist.length,
             itemBuilder: (context, index) {
-              return const Padding(
-                padding: EdgeInsets.only(top: 20),
-                child: Text('About us',
-                    style: TextStyle(color: Colors.white, fontSize: 12)),
+              return Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: Text(datalist[index],
+                    style: const TextStyle(color: Colors.white, fontSize: 12)),
               );
             })
       ],
     );
   }
 }
+
+List ourcompanylist = [
+  'About Us Page',
+  'Career Page',
+  'Help Page',
+  'Transparency',
+  'Diversity',
+  'Safety',
+];
+List ourproductslist = [
+  'On Demand Mechanic',
+  'On Demand Car Wash',
+];
+List legallist = [
+  'Terms and Conditions',
+  'Policy and Privacy',
+  'Cookies',
+  'GDRP'
+];

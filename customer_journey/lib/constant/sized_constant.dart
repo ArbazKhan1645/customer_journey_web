@@ -129,3 +129,7 @@ EdgeInsets responsivesecPadding = const EdgeInsets.only(
   left: 255,
   right: 255,
 );
+EdgeInsets homepagepadding = const EdgeInsets.only(
+  left: 200,
+  right: 200,
+);

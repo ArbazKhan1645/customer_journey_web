@@ -6,6 +6,9 @@ class HomepageTwoDownload extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DownloadPage(textcolor: Colors.white, color: Colors.black,);
+    return const DownloadPage(
+      textcolor: Colors.white,
+      color: Colors.black,
+    );
   }
 }

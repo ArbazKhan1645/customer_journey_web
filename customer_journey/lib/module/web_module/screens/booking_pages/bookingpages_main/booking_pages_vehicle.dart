@@ -381,14 +381,14 @@ class BookingPageVehicle extends StatelessWidget {
                                     Container(
                                       height: 20,
                                       width: 20,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         shape: BoxShape.circle,
                                         color: Color(0xffF0FBF7),
                                       ),
-                                      child: Icon(Icons.done, size: 10),
+                                      child: const Icon(Icons.done, size: 10),
                                     ),
                                     padding10,
-                                    Text(
+                                    const Text(
                                       '+100.000 passengers transported',
                                       style: TextStyle(fontSize: 10),
                                     )

@@ -19,18 +19,18 @@ class DownloadPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  'Download the app',
+                const Text(
+                  'Request in seconds,ride\nin minutes.',
                   style: TextStyle(
-                    color: textcolor,
-                    fontSize: 44,
-                  ),
+                      color: Colors.black,
+                      fontSize: 44,
+                      fontWeight: FontWeight.w700),
                 ),
                 padding20,
-                Text(
-                  'Have a personal driver at your fingertips no matter where you\nare with our easy-to-use smartphone app.',
+                const Text(
+                  'Avaiabla for iOS and Android devices.',
                   style: TextStyle(
-                    color: textcolor,
+                    color: Colors.black,
                     fontSize: 16,
                   ),
                 ),
@@ -133,7 +133,7 @@ class DownloadPage extends StatelessWidget {
             ),
           ),
           Expanded(
-              child: Container(
+              child: SizedBox(
             height: 500,
             child: Image.asset(
               Myimages.pinkphone,

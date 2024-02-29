@@ -21,11 +21,11 @@ class HeaderCommonWidget extends StatelessWidget {
         child: Row(
           children: [
             SizedBox(
-                height: 19,
-                width: 150,
+                height: 59,
+                width: 70,
                 child: darktheme == true
                     ? Image.asset(
-                        Myimages.mainlogo,
+                        Myimages.blacklogo,
                         fit: BoxFit.cover,
                       )
                     : Image.asset(
@@ -115,7 +115,7 @@ class HeaderCommonWidget extends StatelessWidget {
             ),
             padding10,
             ButtonWidget(
-              color: Color(0xff333333),
+              color: const Color(0xff333333),
               text: 'LogIn',
               txtcolor: darktheme == true ? Colors.white : Colors.black,
             ),
@@ -123,7 +123,7 @@ class HeaderCommonWidget extends StatelessWidget {
             ButtonWidget(
               color: Colors.white,
               text: 'SigIn',
-              txtcolor: darktheme == true ? Colors.white : Colors.black,
+              txtcolor: darktheme == false ? Colors.white : Colors.black,
             ),
             padding10,
             Icon(
@@ -138,4 +138,8 @@ class HeaderCommonWidget extends StatelessWidget {
   }
 }
 
-List tablist = ['Home', 'Pages', 'Our Fleet', 'Services', 'Blog', 'Contact'];
+List tablist = [
+  'Why VicPros?',
+  'Our Products ',
+  'Become Mechanic Partner',
+];

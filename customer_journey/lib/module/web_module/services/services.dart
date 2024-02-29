@@ -45,7 +45,10 @@ import 'package:flutter/material.dart';
 class CustomerJourneyWebServices {
   static List<Widget> customerJourneyWebHomepagelist = [
     const HeaderCommonWidget(color: Colors.black, darktheme: true),
-    const HomepageMain(),
+    const HomepageMain(
+      color: Colors.black,
+      textcolor: Colors.black,
+    ),
     const OurfleetCommonWidget(),
     const HowitWork(),
     const PromoionScreen(),
@@ -57,6 +60,7 @@ class CustomerJourneyWebServices {
     const LatestNews(),
     const FreeqlyaskQuestion(),
     const HomepageDownload(),
+    const CommonFooterPage()
   ];
   static List<Widget> customerJourneyWebHomepagtwolist = [
     const HeaderCommonWidget(color: Colors.white, darktheme: false),

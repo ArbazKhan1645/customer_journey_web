@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'package:customer_journey/constant/image_constant.dart';
 import 'package:customer_journey/constant/sized_constant.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +18,7 @@ class LatestNewsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 15),
+      margin: const EdgeInsets.only(left: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -42,11 +44,13 @@ class LatestNewsWidget extends StatelessWidget {
                       children: [
                         Text(
                           amount,
-                          style: TextStyle(fontSize: 22, color: Colors.white),
+                          style: const TextStyle(
+                              fontSize: 22, color: Colors.white),
                         ),
                         Text(
                           date,
-                          style: TextStyle(fontSize: 12, color: Colors.white),
+                          style: const TextStyle(
+                              fontSize: 12, color: Colors.white),
                         ),
                       ],
                     ),
@@ -56,12 +60,12 @@ class LatestNewsWidget extends StatelessWidget {
           padding10,
           Text(
             title,
-            style: TextStyle(fontSize: 12, color: Colors.white),
+            style: const TextStyle(fontSize: 12, color: Colors.white),
           ),
           padding10,
           Text(
             subtitle,
-            style: TextStyle(fontSize: 14, color: Colors.white),
+            style: const TextStyle(fontSize: 14, color: Colors.white),
           ),
           padding10,
           Container(

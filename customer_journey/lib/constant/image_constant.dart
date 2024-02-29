@@ -25,7 +25,7 @@ class Myimages {
   static String semicolon = 'assets/images/semicolon.png';
   static String rightup = 'assets/images/rightuparrow.png';
   static String phase = 'assets/images/phase.png';
-  static String blacklogo = 'assets/images/blacklogo.png';
+  static String blacklogo = 'assets/images/blacklogo.jpeg';
   static String blackdropdown = 'assets/images/blackdropdown.png';
   static String vehicle = 'assets/images/vehicle.png';
   static String route = 'assets/images/route.png';
@@ -48,4 +48,7 @@ class Myimages {
   static String clockred = 'assets/images/clockred.png';
   static String calenderred = 'assets/images/calenderred.png';
   static String card = 'assets/images/card.png';
+  static String repairman = 'assets/images/repairman.png';
+  static String carride = 'assets/images/carride.png';
+  static String mainhomebackground = 'assets/images/mainhomebackground.jpeg';
 }
