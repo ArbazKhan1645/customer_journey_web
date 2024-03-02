@@ -247,7 +247,9 @@ class StepperWidget extends StatelessWidget {
                   border: Border.all(color: Colors.grey.shade100),
                 ),
               ),
-              padding45,
+              const SizedBox(
+                width: 45,
+              ),
               Text(
                 text,
                 style: TextStyle(
@@ -271,7 +273,7 @@ class StepperWidget extends StatelessWidget {
                 width: 55,
               ),
               Text(
-                subtext,
+                'subtext',
                 style: TextStyle(
                   color: Colors.grey.shade100,
                   fontSize: 12,
