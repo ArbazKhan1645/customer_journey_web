@@ -1,5 +1,4 @@
 import 'package:customer_journey/module/web_module/services/services.dart';
-import 'package:customer_journey/sevices/responsive.dart';
 import 'package:flutter/material.dart';
 
 class CustomerJourneyWebHomeView extends StatelessWidget {
@@ -20,16 +19,11 @@ class CustomerJourneyWebHomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
         shrinkWrap: true,
-        itemCount: Responsive.isMobile(context)
-            ? CustomerJourneyWebServices
-                .mobileCustomerJourneyWebHomepagelist.length
-            : CustomerJourneyWebServices.customerJourneyWebHomepagelist.length,
+        itemCount:
+            CustomerJourneyWebServices.customerJourneyWebHomepagelist.length,
         itemBuilder: (context, index) {
-          return Responsive.isMobile(context)
-              ? CustomerJourneyWebServices
-                  .mobileCustomerJourneyWebHomepagelist[index]
-              : CustomerJourneyWebServices
-                  .customerJourneyWebHomepagelist[index];
+          return CustomerJourneyWebServices
+              .customerJourneyWebHomepagelist[index];
         });
   }
 }

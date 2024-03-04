@@ -1,13 +1,24 @@
+// ignore_for_file: unused_import
+
 import 'package:customer_journey/common_widget/common_footer.dart';
 import 'package:customer_journey/common_widget/download_web.dart';
 import 'package:customer_journey/common_widget/header_common_widget.dart';
 import 'package:customer_journey/common_widget/homepage_ourfleet.dart';
+import 'package:customer_journey/common_widget/mobile_common_footer.dart';
+import 'package:customer_journey/common_widget/mobile_download_web.dart';
+import 'package:customer_journey/common_widget/mobile_header_common_widget.dart';
+import 'package:customer_journey/common_widget/mobile_homepage_ourfleet.dart';
+import 'package:customer_journey/common_widget/mobile_ourservices_common.dart';
 import 'package:customer_journey/common_widget/our_partners_cmmon.dart';
 import 'package:customer_journey/common_widget/ourservices_common.dart';
 import 'package:customer_journey/constant/sized_constant.dart';
+import 'package:customer_journey/module/web_module/mobile_screens/mobile_homepage/mobile_homepage/mh_feedback.dart';
+import 'package:customer_journey/module/web_module/mobile_screens/mobile_homepage/mobile_homepage/mh_latestfromnews.dart';
+import 'package:customer_journey/module/web_module/mobile_screens/mobile_homepage/mobile_homepage/mh_question_homepage.dart';
+import 'package:customer_journey/module/web_module/mobile_screens/mobile_homepage/mobile_homepage/mobile_homepage_widget/mobile_homepage_howitwork.dart';
+import 'package:customer_journey/module/web_module/mobile_screens/mobile_homepage/mobile_homepage/mobile_homepage_widget/mobile_promotion.dart';
 import 'package:customer_journey/module/web_module/screens/booking_pages/booking_complete.dart';
 import 'package:customer_journey/module/web_module/screens/booking_pages/bookingpages_main/widgets/bookingheader.dart';
-// ignore: unused_import
 import 'package:customer_journey/module/web_module/screens/fleets_pages/ourfleet_view.dart';
 import 'package:customer_journey/module/web_module/screens/fleets_pages/ourfleet_widget/chooseyourfleet.dart';
 import 'package:customer_journey/module/web_module/screens/fleets_pages/ourfleet_widget/our_fleet_page-four.dart';
@@ -45,7 +56,7 @@ import 'package:flutter/material.dart';
 class CustomerJourneyWebServices {
   static List<Widget> customerJourneyWebHomepagelist = [
     const HeaderCommonWidget(color: Colors.black, darktheme: true),
-    const HomepageMain(
+    const MobileHomepageMain(
       color: Colors.black,
       textcolor: Colors.black,
     ),
@@ -62,6 +73,29 @@ class CustomerJourneyWebServices {
     const HomepageDownload(),
     const CommonFooterPage()
   ];
+
+  static List<Widget> mobileCustomerJourneyWebHomepagelist = [
+    const MobileHeaderCommonWidget(color: Colors.black, darktheme: true),
+    const MobileHomepageMain(
+      color: Colors.black,
+      textcolor: Colors.black,
+    ),
+    const MobileOurfleetCommonWidget(),
+    const MobileHowitWork(),
+    const MobilePromotionScreen(),
+    const MobileOurServicesCommonWidget(
+      blacktheme: false,
+    ),
+    const MobileFeedbackHomepage(),
+    const MobileLatestNews(),
+    const MobileFreeqlyaskQuestion(),
+    const MobileDownloadPage(
+      textcolor: Colors.white,
+      color: Color(0xffFDEEEC),
+    ),
+    const MobileCommonFooterPage()
+  ];
+
   static List<Widget> customerJourneyWebHomepagtwolist = [
     const HeaderCommonWidget(color: Colors.white, darktheme: false),
     const Homepagetwomain(),

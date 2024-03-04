@@ -1,10 +1,10 @@
 import 'package:customer_journey/common_widget/ourservices_updated_widget.dart';
-import 'package:customer_journey/constant/image_constant.dart';
 import 'package:customer_journey/constant/sized_constant.dart';
+
 import 'package:flutter/material.dart';
 
-class OurServicesCommonWidget extends StatelessWidget {
-  const OurServicesCommonWidget({super.key, required this.blacktheme});
+class MobileOurServicesCommonWidget extends StatelessWidget {
+  const MobileOurServicesCommonWidget({super.key, required this.blacktheme});
   final bool blacktheme;
 
   @override
@@ -13,12 +13,12 @@ class OurServicesCommonWidget extends StatelessWidget {
       padding: const EdgeInsets.only(top: 100),
       child: Container(
         color: blacktheme ? Colors.black : Colors.white,
-        height: 550,
         child: Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                padding20,
                 Text(
                   'Our Services',
                   style: TextStyle(
@@ -29,12 +29,8 @@ class OurServicesCommonWidget extends StatelessWidget {
               ],
             ),
             Padding(
-                padding: const EdgeInsets.only(left: 270, top: 10, right: 250),
-                child: GridView.builder(
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 3,
-                      childAspectRatio: 1.7 / 0.9,
-                    ),
+                padding: const EdgeInsets.only(left: 20, top: 10, right: 20),
+                child: ListView.builder(
                     shrinkWrap: true,
                     itemCount: 4,
                     itemBuilder: (context, index) {
