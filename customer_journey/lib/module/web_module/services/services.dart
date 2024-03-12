@@ -16,11 +16,14 @@ import 'package:customer_journey/module/web_module/mobile_screens/mobile_homepag
 import 'package:customer_journey/module/web_module/mobile_screens/mobile_homepage/mobile_homepage/mh_latestfromnews.dart';
 import 'package:customer_journey/module/web_module/mobile_screens/mobile_homepage/mobile_homepage/mh_question_homepage.dart';
 import 'package:customer_journey/module/web_module/mobile_screens/mobile_homepage/mobile_homepage/mobile_homepage_widget/mobile_homepage_howitwork.dart';
+import 'package:customer_journey/module/web_module/mobile_screens/mobile_homepage/mobile_homepage/mobile_homepage_widget/mobile_homepage_main.dart';
 import 'package:customer_journey/module/web_module/mobile_screens/mobile_homepage/mobile_homepage/mobile_homepage_widget/mobile_promotion.dart';
 import 'package:customer_journey/module/web_module/screens/booking_pages/booking_complete.dart';
 import 'package:customer_journey/module/web_module/screens/booking_pages/bookingpages_main/widgets/bookingheader.dart';
 import 'package:customer_journey/module/web_module/screens/fleets_pages/ourfleet_view.dart';
+import 'package:customer_journey/module/web_module/screens/fleets_pages/ourfleet_widget/about_us.dart';
 import 'package:customer_journey/module/web_module/screens/fleets_pages/ourfleet_widget/chooseyourfleet.dart';
+import 'package:customer_journey/module/web_module/screens/fleets_pages/ourfleet_widget/mobile_about_us.dart';
 import 'package:customer_journey/module/web_module/screens/fleets_pages/ourfleet_widget/our_fleet_page-four.dart';
 import 'package:customer_journey/module/web_module/screens/fleets_pages/ourfleet_widget/ourfleet_business_class.dart';
 import 'package:customer_journey/module/web_module/screens/fleets_pages/ourfleet_widget/ourfleet_page_three.dart';
@@ -56,7 +59,7 @@ import 'package:flutter/material.dart';
 class CustomerJourneyWebServices {
   static List<Widget> customerJourneyWebHomepagelist = [
     const HeaderCommonWidget(color: Colors.black, darktheme: true),
-    const MobileHomepageMain(
+    const HomepageMain(
       color: Colors.black,
       textcolor: Colors.black,
     ),
@@ -141,20 +144,40 @@ class CustomerJourneyWebServices {
     // const BookingPageVehicle(),
   ];
   static List<Widget> fleetpages = [
+    // const HeaderCommonWidget(color: Colors.black, darktheme: true),
+    // const Chooseyourfleet(),
+    // const CommonFooterPage(),
+    // const HeaderCommonWidget(color: Colors.black, darktheme: true),
+    // const ChooseyourfleetPageTwo(),
+    // const CommonFooterPage(),
+    // const HeaderCommonWidget(color: Colors.black, darktheme: true),
+    // const ChooseyourfleetPageThree(),
+    // const CommonFooterPage(),
+    // const HeaderCommonWidget(color: Colors.black, darktheme: true),
+    // const OurFleetPageFour(),
+    // const CommonFooterPage(),
     const HeaderCommonWidget(color: Colors.black, darktheme: true),
-    const Chooseyourfleet(),
+    const AboutPageBusineesClass(),
+    // const OurfleetBusinessClass(),
     const CommonFooterPage(),
-    const HeaderCommonWidget(color: Colors.black, darktheme: true),
-    const ChooseyourfleetPageTwo(),
-    const CommonFooterPage(),
-    const HeaderCommonWidget(color: Colors.black, darktheme: true),
-    const ChooseyourfleetPageThree(),
-    const CommonFooterPage(),
-    const HeaderCommonWidget(color: Colors.black, darktheme: true),
-    const OurFleetPageFour(),
-    const CommonFooterPage(),
-    const HeaderCommonWidget(color: Colors.black, darktheme: true),
-    const OurfleetBusinessClass(),
-    const CommonFooterPage(),
+  ];
+
+  static List<Widget> mobilefleetpages = [
+    // const HeaderCommonWidget(color: Colors.black, darktheme: true),
+    // const Chooseyourfleet(),
+    // const CommonFooterPage(),
+    // const HeaderCommonWidget(color: Colors.black, darktheme: true),
+    // const ChooseyourfleetPageTwo(),
+    // const CommonFooterPage(),
+    // const HeaderCommonWidget(color: Colors.black, darktheme: true),
+    // const ChooseyourfleetPageThree(),
+    // const CommonFooterPage(),
+    // const HeaderCommonWidget(color: Colors.black, darktheme: true),
+    // const OurFleetPageFour(),
+    // const CommonFooterPage(),
+    const MobileHeaderCommonWidget(color: Colors.black, darktheme: true),
+    const MobileAboutPageBusineesClass(),
+    // const OurfleetBusinessClass(),
+    const MobileCommonFooterPage()
   ];
 }

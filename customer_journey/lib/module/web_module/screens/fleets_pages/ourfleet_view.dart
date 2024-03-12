@@ -1,4 +1,5 @@
 import 'package:customer_journey/module/web_module/services/services.dart';
+import 'package:customer_journey/sevices/responsive.dart';
 import 'package:flutter/material.dart';
 
 class OurFleetMainView extends StatelessWidget {
@@ -21,7 +22,9 @@ class BookingPageMainViewBody extends StatelessWidget {
         shrinkWrap: true,
         itemCount: CustomerJourneyWebServices.fleetpages.length,
         itemBuilder: (context, index) {
-          return CustomerJourneyWebServices.fleetpages[index];
+          return Responsive.isMobile(context)
+              ? CustomerJourneyWebServices.mobilefleetpages[index]
+              : CustomerJourneyWebServices.fleetpages[index];
         });
   }
 }

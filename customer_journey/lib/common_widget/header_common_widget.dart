@@ -1,7 +1,9 @@
 import 'package:customer_journey/common_widget/button_widget.dart';
 import 'package:customer_journey/constant/image_constant.dart';
 import 'package:customer_journey/constant/sized_constant.dart';
+import 'package:customer_journey/routes/route.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HeaderCommonWidget extends StatelessWidget {
   const HeaderCommonWidget({
@@ -35,37 +37,26 @@ class HeaderCommonWidget extends StatelessWidget {
             padding20,
             SizedBox(
               height: 40,
-              //width: 443,
               child: Row(
                 children: tablist
                     .map((e) => Padding(
                           padding: const EdgeInsets.only(right: 5, left: 10),
                           child: Row(
                             children: [
-                              Text(
-                                e,
-                                style: TextStyle(
-                                  color: darktheme == true
-                                      ? Colors.white
-                                      : Colors.black,
-                                  fontSize: 12,
+                              InkWell(
+                                onTap: () {
+                                  Get.toNamed(Routes.ourFleetMainView);
+                                },
+                                child: Text(
+                                  e,
+                                  style: TextStyle(
+                                    color: darktheme == true
+                                        ? Colors.white
+                                        : Colors.black,
+                                    fontSize: 12,
+                                  ),
                                 ),
                               ),
-                              padding5,
-                              e == 'Contact'
-                                  ? Container()
-                                  : SizedBox(
-                                      height: 10,
-                                      width: 10,
-                                      child: darktheme == true
-                                          ? Image.asset(
-                                              Myimages.arrowdown,
-                                              fit: BoxFit.cover,
-                                            )
-                                          : Image.asset(
-                                              Myimages.blackdropdown,
-                                              fit: BoxFit.cover,
-                                            )),
                             ],
                           ),
                         ))
