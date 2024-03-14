@@ -273,7 +273,7 @@ class StepperWidget extends StatelessWidget {
                 width: 55,
               ),
               Text(
-                'subtext',
+                subtext,
                 style: TextStyle(
                   color: Colors.grey.shade100,
                   fontSize: 12,
